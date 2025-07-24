@@ -7,7 +7,8 @@ export const mockItems = [
     owner: "Alice Johnson",
     condition: "Good",
     available: true,
-    image: "https://example.com/images/drill.jpg",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/5ae0f34c4611a0473d81b1fb/1526782209270-K3ZI92FHVVDM12BMQS4H/cookclub.jpg?format=2500w",
     borrowedBy: null,
     sold: false,
   },
@@ -19,7 +20,8 @@ export const mockItems = [
     owner: "Brian Lee",
     condition: "Excellent",
     available: true,
-    image: "https://example.com/images/tent.jpg",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/5ae0f34c4611a0473d81b1fb/1526782209270-K3ZI92FHVVDM12BMQS4H/cookclub.jpg?format=2500w",
     borrowedBy: null,
     sold: false,
   },
@@ -31,7 +33,8 @@ export const mockItems = [
     owner: "Samantha Green",
     condition: "Very Good",
     available: false,
-    image: "https://example.com/images/crockpot.jpg",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/5ae0f34c4611a0473d81b1fb/1526782209270-K3ZI92FHVVDM12BMQS4H/cookclub.jpg?format=2500w",
     borrowedBy: "Prachi Patel",
     sold: false,
   },
@@ -43,7 +46,8 @@ export const mockItems = [
     owner: "Ravi Mehra",
     condition: "Good",
     available: true,
-    image: "https://example.com/images/yogamat.jpg",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/5ae0f34c4611a0473d81b1fb/1526782209270-K3ZI92FHVVDM12BMQS4H/cookclub.jpg?format=2500w",
     borrowedBy: null,
     sold: false,
   },
@@ -55,7 +59,8 @@ export const mockItems = [
     owner: "Dana Wang",
     condition: "Good",
     available: true,
-    image: "https://example.com/images/ladder.jpg",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/5ae0f34c4611a0473d81b1fb/1526782209270-K3ZI92FHVVDM12BMQS4H/cookclub.jpg?format=2500w",
     borrowedBy: null,
     sold: false,
   },
@@ -68,7 +73,8 @@ export const mockItems = [
 
     condition: "Like New",
     available: true,
-    image: "https://example.com/images/catan.jpg",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/5ae0f34c4611a0473d81b1fb/1526782209270-K3ZI92FHVVDM12BMQS4H/cookclub.jpg?format=2500w",
     borrowedBy: null,
     sold: false,
   },
