@@ -43,6 +43,7 @@ Taiwind CSS
 # 6.Add Item Page: Users can add new items with image, name, category, and owner.
 
 # 7.404 Page: Navigating to an invalid route redirects to a clean 404 page.
+# 8.Persisting data in local Storage
 
 
 ### Known Issues / Limitations
