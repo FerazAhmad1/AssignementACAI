@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ItemCard } from "./ItemCard.jsx";
 import { useRef } from "react";
 import { useItemContext } from "../context/useItemContext";
+import Input from "./Input.jsx";
 
 const Home = () => {
   const { items } = useItemContext();
@@ -43,11 +44,11 @@ const Home = () => {
   return (
     <>
       <div className="flex justify-between items-center  gap-4 p-5 ">
-        <input
+        <Input
           type="text"
           name="search"
           value={srchStr}
-          onChange={changeHandler}
+          onChangeHandler={changeHandler}
           placeholder="Search items..."
           className="w-full max-w-md px-4 py-2 border-1 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500"
         />
