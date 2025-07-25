@@ -17,6 +17,7 @@ A minimal React app for sharing resources like kitchen items, workout equipment,
 ```bash
 git clone https://github.com/FerazAhmad1/AssignementACAI.git
 cd AssignementACAI
+```
 
 ### 2. Install the Dependecy
 npm install
@@ -25,25 +26,19 @@ npm install
 npm start
 
 ### 4. Tech Stack
-Reactjs
+Reactjs,React Router
 Taiwind CSS
 
-###  Feature and Summary
+## Feature and Summary
 
-# 1.Home Page: Displays a list of all shared items.
-
-# 2. Owner Controls: If the current user is the owner of an item, they can mark it as Sold via a checkbox.
-
-# 3.Once marked sold, the item status changes to "Not Available" and turns red.
-
-# 4. Sorting: Users can sort items by Name, Category, or Owner.
-
-# 5.Details Page: Click "View Details" to see full item info.
-
-# 6.Add Item Page: Users can add new items with image, name, category, and owner.
-
-# 7.404 Page: Navigating to an invalid route redirects to a clean 404 page.
-# 8.Persisting data in local Storage
+- **Home Page:** Displays a list of all shared items.
+- **Owner Controls:** If the current user is the owner of an item, they can mark it as Sold via a checkbox.
+- Once marked sold, the item status changes to "Not Available" and turns red.
+- **Sorting:** Users can sort items by Name, Category, or Owner.
+- **Details Page:** Click "View Details" to see full item info.
+- **Add Item Page:** Users can add new items with image, name, category, and owner.
+- **404 Page:** Navigating to an invalid route redirects to a clean 404 page.
+- **Data Persitent:** Data Persistin in local storage
 
 
 ### Known Issues / Limitations
@@ -57,4 +52,4 @@ Taiwind CSS
 
 
 
-```
+
