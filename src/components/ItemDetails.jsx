@@ -2,14 +2,12 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useItemContext } from "../context/useItemContext";
 import { Button } from "./Button";
-// Mock data for now, replace with actual fetch or context
 
 const ItemDetails = () => {
   const { id } = useParams();
   const { items } = useItemContext();
   const [oneItem, setOneItem] = useState(null);
   useEffect(() => {
-    // Replace with actual API or data fetch
     const foundItem = items.find((itm) => itm.id === id);
     setOneItem(foundItem);
   }, [id]);

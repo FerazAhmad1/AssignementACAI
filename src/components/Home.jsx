@@ -19,6 +19,14 @@ const Home = () => {
     return sortedList;
   };
 
+  const onMarkSold = (id) => {
+    const soldItem = filtertedItem.find((itm) => (itm.id = id));
+
+    soldItem.sold = true;
+    soldItem.available = false;
+    setFilterItem(() => [...filtertedItem]);
+  };
+
   const sortHandler = (e) => {
     if (e.target.value == "relevance") return;
     setSortBy(e.target.value);
@@ -72,7 +80,7 @@ const Home = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-5">
         {filtertedItem.map((item) => {
-          return <ItemCard key={item.id} item={item} />;
+          return <ItemCard key={item.id} item={item} onMarkSold={onMarkSold} />;
         })}
       </div>
     </>
