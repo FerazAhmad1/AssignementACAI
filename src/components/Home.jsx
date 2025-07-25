@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ItemCard } from "./ItemCard.jsx";
 import { useRef } from "react";
 import { useItemContext } from "../context/useItemContext";
+import { useOwnerContext } from "../context/useOwnerContext.js";
 import Input from "./Input.jsx";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
   const [srchStr, setSrh] = useState("");
   const [sortBy, setSortBy] = useState("Name");
   const searchRef = useRef();
+  const { owner: currentUser } = useOwnerContext();
 
   const sortList = (list, key) => {
     key = key.toLowerCase();
@@ -80,7 +82,20 @@ const Home = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-5">
         {filtertedItem.map((item) => {
-          return <ItemCard key={item.id} item={item} onMarkSold={onMarkSold} />;
+          return (
+            <ItemCard key={item.id} item={item} onMarkSold={onMarkSold}>
+              {currentUser === item.owner && item.available && (
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    onClick={() => onMarkSold(item.id)}
+                    className="accent-red-600 w-5 h-5 cursor-pointer"
+                  />
+                  <label className="text-red-600 font-medium">Sold</label>
+                </div>
+              )}
+            </ItemCard>
+          );
         })}
       </div>
     </>

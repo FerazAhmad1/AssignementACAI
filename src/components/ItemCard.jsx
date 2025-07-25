@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
-import { useOwnerContext } from "../context/useOwnerContext";
 
-export const ItemCard = ({ item, onMarkSold }) => {
-  const { owner: currentUser } = useOwnerContext();
-
-  const isOwner = currentUser === item.owner;
+export const ItemCard = ({ item, children }) => {
   return (
     <div className=" flex flex-col gap-3 shadow-sm rounded-lg p-6 bg-white ">
       <img
@@ -20,16 +16,8 @@ export const ItemCard = ({ item, onMarkSold }) => {
             {item.available ? "Available" : "Not Available"}
           </p>
         </div>
-        {isOwner && item.available && (
-          <div className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              onClick={() => onMarkSold(item.id)}
-              className="accent-red-600 w-5 h-5 cursor-pointer"
-            />
-            <label className="text-red-600 font-medium">Sold</label>
-          </div>
-        )}
+
+        {children}
       </div>
 
       <Link
