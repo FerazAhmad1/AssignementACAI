@@ -20,12 +20,15 @@ cd AssignementACAI
 ```
 
 ### 2. Install the Dependecy
+
 npm install
 
 ### 3. Start the Development Server
+
 npm start
 
 ### 4. Tech Stack
+
 Reactjs,React Router
 Taiwind CSS
 
@@ -40,8 +43,13 @@ Taiwind CSS
 - **404 Page:** Navigating to an invalid route redirects to a clean 404 page.
 - **Data Persitent:** Data Persistin in local storage
 
+## Bonus Task
+
+- **Mapview page:** Displays a google map with marker for all available data.
+- **Mapview Filter:** we can filter on the basis of availability,and different category.On clicking marker a pop is open which can lead you to item details page.and once you click back you will back to map.
 
 ### Known Issues / Limitations
+
 🔄 Search & Sort Not Sticky: When items overflow the screen, the search and sort bar scrolls out of view.
 
 📃 No Pagination: All items are loaded at once.
@@ -49,7 +57,3 @@ Taiwind CSS
 🔐 No Authentication: There are no login or signup flows; hence, no protected routes.
 
 👤 Hardcoded Owner: The default owner is hardcoded as "Alice Johnson", who owns the first item.
-
-
-
-
