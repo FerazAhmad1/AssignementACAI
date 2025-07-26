@@ -45,8 +45,13 @@ Taiwind CSS
 
 ## Bonus Task
 
-- **Mapview page:** Displays a google map with marker for all available data.
-- **Mapview Filter:** we can filter on the basis of availability,and different category.On clicking marker a pop is open which can lead you to item details page.and once you click back you will back to map.
+- **Mapview page:** Displays a Google Map with markers for all available items.  
+  👉 To visit, go to: [https://assignement-acai.vercel.app/map](https://assignement-acai.vercel.app/map)
+
+- **Mapview Filter:** Users can filter items based on **availability** and **category**.  
+  On clicking a marker, a popup appears with item details and a link to the item's detail page.  
+  After visiting an item, clicking the **Back** button will return you to the **Mapview** page.
+
 
 ### Known Issues / Limitations
 
