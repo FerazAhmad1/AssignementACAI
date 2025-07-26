@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 const NotFound = () => {
   const navigate = useNavigate();
-
+  console.log("WWWWWWWWWW");
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-6 text-center">
       <h1 className="text-7xl font-extrabold text-teal-600 mb-4">404</h1>

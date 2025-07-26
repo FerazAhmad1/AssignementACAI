@@ -21,7 +21,8 @@ export const ItemCard = ({ item, children }) => {
       </div>
 
       <Link
-        to={`/items/${item.id}`}
+        to={{ pathname: `/items/${item.id}` }}
+        state={{ from: "/" }}
         className="px-4 py-2 w-full text-center bg-teal-600 text-white rounded-lg"
       >
         View Details

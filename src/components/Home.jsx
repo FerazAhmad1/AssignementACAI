@@ -8,7 +8,7 @@ import Input from "./Input.jsx";
 const Home = () => {
   const { items } = useItemContext();
   const [filtertedItem, setFilterItem] = useState(items);
-  const [srchStr, setSrh] = useState("");
+
   const [sortBy, setSortBy] = useState("Name");
   const searchRef = useRef();
   const { owner: currentUser } = useOwnerContext();
@@ -30,9 +30,13 @@ const Home = () => {
   };
 
   const sortHandler = (e) => {
-    if (e.target.value == "relevance") return;
+    if (e.target.value == "relevance") {
+      setSortBy(e.target.value);
+      setFilterItem(() => [...items]);
+      return;
+    }
     setSortBy(e.target.value);
-    const sortedItem = sortList(filtertedItem, e.target.value);
+    const sortedItem = sortList([...filtertedItem], e.target.value);
     setFilterItem(sortedItem);
   };
 
@@ -42,7 +46,6 @@ const Home = () => {
   };
 
   const changeHandler = (e) => {
-    setSrh(e.target.value);
     if (searchRef.current) {
       clearTimeout(searchRef.current);
     }
@@ -54,24 +57,26 @@ const Home = () => {
   return (
     <>
       <div className="flex justify-between items-center  gap-4 p-5 ">
-        <Input
-          type="text"
-          name="search"
-          value={srchStr}
-          onChangeHandler={changeHandler}
-          placeholder="Search items..."
-        />
+        <div className="md:min-w-lg">
+          <Input
+            type="text"
+            name="search"
+            onChangeHandler={changeHandler}
+            placeholder="Search items..."
+          />
+        </div>
+
         <div>
           <label
             htmlFor="sortBy"
-            className="mb-1 text-sm font-medium text-gray-700 mr-2"
+            className=" hidden sm:inline-block mb-1 text-sm font-medium text-gray-700 mr-2"
           >
             SORT BY
           </label>
           <select
             value={sortBy}
             onChange={sortHandler}
-            className="px-4 py-2 border-1 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500"
+            className="px-4 py-2 border-1 border-gray-200 rounded-lg focus:outline-none focus: focus:border-teal-600"
           >
             <option value="relevance">Relevance</option>
             <option value="name">Name</option>

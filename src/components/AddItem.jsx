@@ -78,10 +78,8 @@ const AddItem = () => {
               value={formData.name}
               onChangeHandler={handleChange}
               placeholder="Item name"
+              errorMsg={errors.name}
             />
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name}</p>
-            )}
           </Div>
 
           {/* Description */}
@@ -129,10 +127,8 @@ const AddItem = () => {
               value={formData.condition}
               onChangeHandler={handleChange}
               placeholder="Item condition"
+              errorMsg={errors.condition}
             />
-            {errors.condition && (
-              <p className="text-red-500 text-sm">{errors.condition}</p>
-            )}
           </Div>
 
           {/* Image URL */}
@@ -144,10 +140,8 @@ const AddItem = () => {
               value={formData.image}
               onChangeHandler={handleChange}
               placeholder="https://example.com/image.jpg"
+              errorMsg={errors.image}
             />
-            {errors.image && (
-              <p className="text-red-500 text-sm">{errors.image}</p>
-            )}
           </Div>
 
           {/* Submit Button */}

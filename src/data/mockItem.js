@@ -32,7 +32,7 @@ export const mockItems = [
     category: "Kitchen",
     owner: "Samantha Green",
     condition: "Very Good",
-    available: false,
+    available: true,
     image:
       "https://images.squarespace-cdn.com/content/v1/5ae0f34c4611a0473d81b1fb/1526782209270-K3ZI92FHVVDM12BMQS4H/cookclub.jpg?format=2500w",
     borrowedBy: "Prachi Patel",
